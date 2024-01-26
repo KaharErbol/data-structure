@@ -1,13 +1,16 @@
 # data-structure
 ## Content
-1. Definition [graph](graph-definition)
-2. Types of Graphs [types](graph-types)
+1. [Definition of Graph Theory](#graph)
+2. [Types of Graphs](#types-of-graphs)
+3. [Special Graphs](#special-graphs)
+4. [Representing Graphs](#representing-graphs)
+5. [Common Graph Theory Problems](#common-graph-theory-problems)
 
-## Graph {#graph-definition}
+## Graph
 Graph theory is the mathematical theory of the properties and applications
 of graphs (networks).
 
-### Types of Graphs {#graph-types}
+### Types of Graphs
 1. Undirected Graph
 ...edges have no orientation.
 
@@ -17,7 +20,7 @@ of graphs (networks).
 3. Weighted Graphs
 ...edges can have certain weights to represent an arbitrary value such as cost, distance, quantity, etc...
 
-### Special Graphs {#special-graphs}
+### Special Graphs
 Below are only a few special graphs, there are more than these.
 1. Trees
 ...undirected graph with no cycles. It is a connected graph with N nodes and N-1 edges.
@@ -46,7 +49,7 @@ towards the root node. Points away called arborescence (out-tree), otherwise it 
 - often seen as worse case possible graph.
 ![complete graph](./imgs/complete_graph.png)
 
-### Representing Graphs {#representing-graphs}
+### Representing Graphs
 
 #### Adjacency Matrix   
 Adjacency matrix m is used to represent graphs.
@@ -99,25 +102,28 @@ Adjacency matrix m is used to represent graphs.
 ![edge list](./imgs/edge_list.png)
 
 
-### Common Graph Theory Problems {#graph-problems}
-... directed or undirected? 
+### Common Graph Theory Problems
+... directed or undirected?
+
 ... are edges weighted?
+
 ... is the graph sparse or dense with the edges?
+
 ... should I use an adjacency matrix, adjacency list, and edge list or other structure to represent the graph efficiently?
 
 
-#### Shortest Path Problem  {#shortest-path}
+#### Shortest Path Problem
 Given a weighted graph, find the shortest path of edges from node A to node B.
 
 ![shortest-path](./imgs/shortest-path-problem.png)
 
 Algorithms: BFS(unweighted graph), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, and many more.
 
-#### Connectivity {#connectivity}
+#### Connectivity
 Does there exist a path between node A and node B?
 
 ![connectivity](./imgs/connectivity.png)
 
 Solution: Use **union find** data structure or any search algorithm (e.d DFS)
 
-#### Negative Cycles {#negative-cycles}
+#### Negative Cycles
