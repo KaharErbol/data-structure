@@ -1,10 +1,13 @@
 # data-structure
+## Content
+1. Definition [graph](graph-definition)
+2. Types of Graphs [types](graph-types)
 
-## Graph
+## Graph {#graph-definition}
 Graph theory is the mathematical theory of the properties and applications
 of graphs (networks).
 
-### Types of Graphs
+### Types of Graphs {#graph-types}
 1. Undirected Graph
 ...edges have no orientation.
 
@@ -14,7 +17,7 @@ of graphs (networks).
 3. Weighted Graphs
 ...edges can have certain weights to represent an arbitrary value such as cost, distance, quantity, etc...
 
-### Special Graphs
+### Special Graphs {#special-graphs}
 Below are only a few special graphs, there are more than these.
 1. Trees
 ...undirected graph with no cycles. It is a connected graph with N nodes and N-1 edges.
@@ -43,8 +46,9 @@ towards the root node. Points away called arborescence (out-tree), otherwise it 
 - often seen as worse case possible graph.
 ![complete graph](./imgs/complete_graph.png)
 
-### Representing Graphs
-**Adjacency Matrix**   
+### Representing Graphs {#representing-graphs}
+
+#### Adjacency Matrix   
 Adjacency matrix m is used to represent graphs.
 - the cell m[i][j] represents the edge weight of going from node i to node j.
 - it is often assumed that the edge of going from a node to itself has a cost of zero.
@@ -61,7 +65,7 @@ Adjacency matrix m is used to represent graphs.
 [wiki - adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix)
 ![adjacency matrix](./imgs/adjacency_matrix.png)
 
-**Adjacency List**
+#### Adjacency List
 - a way to represent a graph as a map from nodes to lists of edges.
 
 *Pros*
@@ -76,7 +80,7 @@ Adjacency matrix m is used to represent graphs.
 [wiki - adjacency list](https://en.wikipedia.org/wiki/Adjacency_list)
 ![adjacency list](./imgs/adjacency_list.png)
 
-**Edge List**
+#### Edge List
 - is a way to represent a graph as an unordered list of edges.
 - the triplet (u, v, w) means: the cost from node u to bode v is w.
 - it is seldomly used because of its lack of structure.
@@ -95,13 +99,25 @@ Adjacency matrix m is used to represent graphs.
 ![edge list](./imgs/edge_list.png)
 
 
-### Common Graph Theory Problems
+### Common Graph Theory Problems {#graph-problems}
 ... directed or undirected? 
 ... are edges weighted?
 ... is the graph sparse or dense with the edges?
 ... should I use an adjacency matrix, adjacency list, and edge list or other structure to represent the graph efficiently?
 
 
-**Shortest Path Problem**   
+#### Shortest Path Problem  {#shortest-path}
 Given a weighted graph, find the shortest path of edges from node A to node B.
+
+![shortest-path](./imgs/shortest-path-problem.png)
+
 Algorithms: BFS(unweighted graph), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, and many more.
+
+#### Connectivity {#connectivity}
+Does there exist a path between node A and node B?
+
+![connectivity](./imgs/connectivity.png)
+
+Solution: Use **union find** data structure or any search algorithm (e.d DFS)
+
+#### Negative Cycles {#negative-cycles}
