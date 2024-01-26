@@ -44,7 +44,7 @@ towards the root node. Points away called arborescence (out-tree), otherwise it 
 ![complete graph](./imgs/complete_graph.png)
 
 ### Representing Graphs
-**Adjacency Matrix**
+**Adjacency Matrix**   
 Adjacency matrix m is used to represent graphs.
 - the cell m[i][j] represents the edge weight of going from node i to node j.
 - it is often assumed that the edge of going from a node to itself has a cost of zero.
@@ -93,3 +93,15 @@ Adjacency matrix m is used to represent graphs.
 
 [wiki - edge list](https://en.wikipedia.org/wiki/Edge_list)
 ![edge list](./imgs/edge_list.png)
+
+
+### Common Graph Theory Problems
+... directed or undirected? 
+... are edges weighted?
+... is the graph sparse or dense with the edges?
+... should I use an adjacency matrix, adjacency list, and edge list or other structure to represent the graph efficiently?
+
+
+**Shortest Path Problem**   
+Given a weighted graph, find the shortest path of edges from node A to node B.
+Algorithms: BFS(unweighted graph), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, and many more.
