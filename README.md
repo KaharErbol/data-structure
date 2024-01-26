@@ -1,4 +1,6 @@
 # data-structure
+<a id="top"></a>
+
 ## Content
 1. [Definition of Graph Theory](#graph)
 2. [Types of Graphs](#types-of-graphs)
@@ -103,6 +105,7 @@ Adjacency matrix m is used to represent graphs.
 
 
 ### Common Graph Theory Problems
+<a id="top" href="#top">[Back to Top](#top)</a>
 ... directed or undirected?
 
 ... are edges weighted?
