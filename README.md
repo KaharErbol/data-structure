@@ -106,6 +106,7 @@ Adjacency matrix m is used to represent graphs.
 
 ### Common Graph Theory Problems
 <a id="top" href="#top">[Back to Top](#top)</a>
+
 ... directed or undirected?
 
 ... are edges weighted?
@@ -130,3 +131,47 @@ Does there exist a path between node A and node B?
 Solution: Use **union find** data structure or any search algorithm (e.d DFS)
 
 #### Negative Cycles
+Does my weighted digraph have any negative cycles? If so, where?
+
+![negative-cycles](./imgs/negative_cycles.png)
+
+Algorithms: Bellman-Ford and Floyd-Warshall
+
+#### Strongly Connected Components (SCCs)
+It can be thought of as self-contained cycles within a directed graph where every vertex in a given cycle can reach every other vertex in the same cycle.
+
+![scc](./imgs/strongly-connected-components.png)
+
+Algorithms: Tarjan's and Kosaraju's algorithm
+
+#### Traveling Salesman Problem
+The TSP problem is NP-Hard meaning it's a very computationally challenging problem. This is unfortunate because teh TSP has several very important applications.
+
+![traveling salesman](./imgs/traveling_salesman_problem.png)
+
+Algorithms: Held-Karp, branch and bound and many approximation algorithms
+
+#### Finding Bridges in a Graph
+A bridge / cut edge is any edge in a graph whose removal increase the number of connected components.
+
+![bridges](./imgs/bridges.png)
+
+Bridges are important in graph theory because they often hint at weak points, bottlenecks or vulnerabilities in a graph.
+
+#### Articulation Points
+An articulation point / cut vertex is any node in a graph whose removal increases the number of connected components.
+
+![cut vertex](./imgs/cut_vertext.png)
+
+#### Minimum Spanning  Tree (MST)
+![MST-1](./imgs/mst_1.png)
+![MST-2](./imgs/mst_2.png)
+
+Algorithms: Kruskal's, Prim's & Boruvka's algorithm
+
+#### Network flow: max flow
+Q: With an infinite input source how much "flow" can we push through the network?
+
+![network-flow](./imgs/network-flow.png)
+
+Algorithms: Ford-Fulkerson, Edmonds-Karp & Dinic's algorithm
