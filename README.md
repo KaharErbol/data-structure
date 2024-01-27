@@ -192,7 +192,7 @@ DFS is the most fundamental search algorithm to explore nodes and edges of a gra
 - When augmented to perform other tasks such as count connected components, determine connectivity, or find the bridges/articulation points then DFS is very useful.
 
 Basic DFS
-: A DFS plunges depth first into a graph without regard for which edge it takes next until it cannot go any further at which point it backtracks and continues.
+:  A DFS plunges depth first into a graph without regard for which edge it takes next until it cannot go any further at which point it backtracks and continues.
 
 ```python
 # Global or class scope variables
