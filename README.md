@@ -119,7 +119,7 @@ Adjacency matrix m is used to represent graphs.
 #### Shortest Path Problem
 Given a weighted graph, find the shortest path of edges from node A to node B.
 
-![shortest-path](./imgs/shortest-path-problem.png)
+![shortest-path](./imgs/shortest_path_problem.png)
 
 Algorithms: BFS(unweighted graph), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, and many more.
 
