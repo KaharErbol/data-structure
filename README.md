@@ -7,12 +7,15 @@
 3. [Special Graphs](#special-graphs)
 4. [Representing Graphs](#representing-graphs)
 5. [Common Graph Theory Problems](#common-graph-theory-problems)
+6. [Depth First Search](#depth-first-search)
 
 ## Graph
 Graph theory is the mathematical theory of the properties and applications
 of graphs (networks).
 
 ### Types of Graphs
+<a id="top" href="#top">[Back to Top](#top)</a>
+
 1. Undirected Graph
 ...edges have no orientation.
 
@@ -23,6 +26,8 @@ of graphs (networks).
 ...edges can have certain weights to represent an arbitrary value such as cost, distance, quantity, etc...
 
 ### Special Graphs
+<a id="top" href="#top">[Back to Top](#top)</a>
+
 Below are only a few special graphs, there are more than these.
 1. Trees
 ...undirected graph with no cycles. It is a connected graph with N nodes and N-1 edges.
@@ -52,6 +57,7 @@ towards the root node. Points away called arborescence (out-tree), otherwise it 
 ![complete graph](./imgs/complete_graph.png)
 
 ### Representing Graphs
+<a id="top" href="#top">[Back to Top](#top)</a>
 
 #### Adjacency Matrix   
 Adjacency matrix m is used to represent graphs.
@@ -175,3 +181,39 @@ Q: With an infinite input source how much "flow" can we push through the network
 ![network-flow](./imgs/network-flow.png)
 
 Algorithms: Ford-Fulkerson, Edmonds-Karp & Dinic's algorithm
+
+### Depth First Search
+<a id="top" href="#top">[Back to Top](#top)</a>
+
+DFS is the most fundamental search algorithm to explore nodes and edges of a graph.
+- Time Complexity: O(V+E)
+- It is used as a building block in other algorithms.
+- By itself the DFS isn't all that useful.
+- When augmented to perform other tasks such as count connected components, determine connectivity, or find the bridges/articulation points then DFS is very useful.
+
+Basic DFS
+: A DFS plunges depth first into a graph without regard for which edge it takes next until it cannot go any further at which point it backtracks and continues.
+
+```python
+# Global or class scope variables
+n = num of nodes in the graph
+g = adjacency list representing graph
+visited = [False, ..., False] # size n
+
+def dfs(at):
+  if visited[at]:
+    return
+  visited[at] = True
+
+  neighbors = graph[at]
+  for next in neighbors:
+    dfs(next)
+
+# Start DFS at node 0
+start_node = 0
+dfs(start_node)
+```
+
+#### Use Case - Connected Components
+
+
