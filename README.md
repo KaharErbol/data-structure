@@ -191,9 +191,11 @@ DFS is the most fundamental search algorithm to explore nodes and edges of a gra
 - By itself the DFS isn't all that useful.
 - When augmented to perform other tasks such as count connected components, determine connectivity, or find the bridges/articulation points then DFS is very useful.
 
-Basic DFS
-:  A DFS plunges depth first into a graph without regard for which edge it takes next until it cannot go any further at which point it backtracks and continues.
+**Basic DFS**
 
+A DFS plunges depth first into a graph without regard for which edge it takes next until it cannot go any further at which point it backtracks and continues.
+
+**Sudo Code**
 ```python
 # Global or class scope variables
 n = num of nodes in the graph
@@ -214,6 +216,42 @@ start_node = 0
 dfs(start_node)
 ```
 
-#### Use Case - Connected Components
+#### Use Case
+1. Connected Components
+
+**Sudo Code**
+
+```python
+# Global or class scope variables
+n = num of nodes in the graph
+g = adjacency list representing graph
+visited = [False, ..., False] # size n
+count = 0
+components = empty int array # size n
+
+def findComponents():
+  for i in range(n):
+    if not visited[i]:
+      count += 1
+      dfs(is)
+  return count, components
+
+def dfs(at):
+  visited[at] = True
+  components[at] = count
+  for next in g[at]:
+    if not visited[next]:
+      dfs(next)
+```
+
+2. Other Usages
+- Compute a graph's minimum spanning tree.
+- Detect and find cycle.
+- Check if a graph is bipartite.
+- Find strongly connected components.
+- Topologically sort the nodes of a graph.
+- Find bridges/articulations points.
+- Find augmenting path in a flow network.
+- Generate mazes.
 
 
